@@ -4,22 +4,17 @@
 #include <iostream>
 using namespace std;
 
-Juego ::Juego()
-{
-    caminos_tomados = {};
-    escena_actual = Escena();
+Juego :: Juego() {
+    historia_actual = Historia();
 }
 
-Juego ::Juego(vector<int> camino_inicial, int indx_narracion)
+Juego ::Juego(Escena &escena_inicial)
 {
-    caminos_tomados = camino_inicial;
-    escena_actual = Escena(camino_inicial, indx_narracion);
+    historia_actual = Historia(escena_inicial);
 }
 
 int Juego ::pedir_decision()
 {
-    escena_actual.mostrar_decisiones();
-
     int indx_decision = 0;
     bool ok = false;
 
@@ -29,7 +24,7 @@ int Juego ::pedir_decision()
         cin >> indx_decision;
         cin.ignore(10000, '\n');
 
-        if (indx_decision > 0 && indx_decision <= escena_actual.decisiones.size() - 1)
+        if (indx_decision > 0 && indx_decision <= historia_actual.escena_actual.decisiones.size())
             ok = true;
         else
             cout << "\nEscriba el numero de la decision que va tomar.\n";

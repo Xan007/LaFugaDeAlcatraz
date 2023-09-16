@@ -4,18 +4,16 @@
 #include <string>
 #include <vector>
 #include "Escena.h"
+#include "Historia.h"
 using namespace std;
 
 class Juego
 {
 public:
     Juego();
-    Juego(vector<int> camino_inicial, int indx_narracion);
+    Juego(Escena &escena_inicial);
 
-    // Guarda el indice de los caminos tomados
-    vector<int> caminos_tomados;
-
-    Escena escena_actual;
+    Historia historia_actual;
 
     // El juego mantiene llamando a mostrar_narracion y siguiente_narracion y si 
     // recibe false como resultado va pedir decision
