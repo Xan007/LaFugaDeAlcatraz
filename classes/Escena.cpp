@@ -29,7 +29,7 @@ bool Escena :: mostrar_decisiones()
     if (decisiones.size() == 0)
         return false; // Es un final
 
-    cout << "\nQue decision tomas?\n\n";
+    cout << "\n=>Toma una decision<=\n\n";
 
     int i = 1;
     for (auto it = decisiones.begin(); it != decisiones.end(); it++)
@@ -39,4 +39,10 @@ bool Escena :: mostrar_decisiones()
     }
 
     return true;
+}
+
+Escena :: ~Escena() {
+    narraciones = {};
+    decisiones = {};
+    sig_escenas = {};
 }

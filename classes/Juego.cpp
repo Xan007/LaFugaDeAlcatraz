@@ -33,3 +33,7 @@ int Juego ::pedir_decision()
     // Se le resta uno para que coincida como indice en el vector
     return indx_decision - 1;
 }
+
+Juego :: ~Juego() {
+    historia_actual = {};
+}

@@ -19,6 +19,8 @@ public:
     // recibe false como resultado va pedir decision
 
     int pedir_decision(); // Mostrar Pedir al usuario la decision, verificarla, actualzar la escena.
+
+    ~Juego();
 };
 
 #endif

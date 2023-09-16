@@ -17,6 +17,8 @@ public:
 
     bool cambiar_escena(int indx_escena);
     bool tomar_decision(int indx_decision);
+
+    ~Historia();
 };
 
 #endif

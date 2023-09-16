@@ -19,6 +19,8 @@ public:
     void mostrar_narracion();   // Muestra el string en el indice de la historia.
     bool siguiente_narracion(); // Actualiza el indice de narracion o decide si mostrar opciones.
     bool mostrar_decisiones();  // Muestra las decisiones
+
+    ~Escena();
 };
 
 #endif

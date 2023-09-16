@@ -32,3 +32,7 @@ bool Historia ::tomar_decision(int indx_decision)
 
     return true;
 }
+
+Historia :: ~Historia() {
+    escena_actual = {};
+}
