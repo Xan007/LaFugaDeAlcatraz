@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+// Constructor por defecto
 Escena ::Escena()
 {
     indx_narracion = 0;
@@ -17,6 +18,7 @@ void Escena ::mostrar_narracion()
 
 bool Escena ::siguiente_narracion()
 {
+    // Si el siguiente indice de narracion no existe en narraciones
     if (indx_narracion + 1 >= narraciones.size())
         return false; // Llamar a mostrar decisiones y eso...
 
@@ -26,8 +28,11 @@ bool Escena ::siguiente_narracion()
 
 bool Escena :: mostrar_decisiones()
 {
+    // Una escena es un final si no tiene decisiones
     if (decisiones.size() == 0)
-        return false; // Es un final
+        return false;
+    
+    // Imprimir las decisiones en lista empezando en 1
 
     cout << "\n=>Toma una decision<=\n\n";
 
