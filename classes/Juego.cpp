@@ -27,9 +27,11 @@ int Juego ::pedir_decision()
     {
         cout << "Ingrese la decision que quiere tomar: ";
         cin >> indx_decision;
+        if (cin.fail())
+            cin.clear();
         cin.ignore(10000, '\n');
 
-        // Indice dentro del rango de 0 hasta el tamaño de decisiones
+                // Indice dentro del rango de 0 hasta el tamaño de decisiones
         if (indx_decision > 0 && indx_decision <= historia_actual.escena_actual.decisiones.size())
             ok = true;
         else
