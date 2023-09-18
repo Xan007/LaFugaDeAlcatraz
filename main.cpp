@@ -55,12 +55,14 @@ int main()
             // A partir de aca esta mostrando las decisiones
             // Primero pide una decisión, el resultado se pasa
             // a la funcion tomar_decision para actualizar la escena
-            
+
             // Si no se puede tomar la decisión significa que hay un error
             // en la creación de la historia
             if (!historiaJuego.tomar_decision(Alcatraz.pedir_decision()))
+            {
                 cout << "Hay un error en la historia.\n";
                 break;
+            }
 
             cout << "===================================\n\n";
         }
