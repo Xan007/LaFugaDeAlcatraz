@@ -25,54 +25,166 @@ Escena obtener_escena_inicial() {
       "lo que decides llevar a cabo un audaz plan de escape. Cada elección que "
       "tomes será crucial para el éxito de tu fuga.\n",
 
-      "Estas ideando un plan pero para esto necesitas un compañero de escape.",
-      "Miras a John, un hombre meticuloso, es conocido por sus fugas en "
-      "carceles anteriores",
-      "ademas es un preso designado al area cocina",
-      "Al lado de el está Clarence, un tipo creativo, es conocido por usar "
-      "distintas maneras de robar bancos de forma creativa"};
-  inicio.decisiones = {"John", "Clarence"};
+      "Estas ideando un plan para escapar pero te haces la pregunta de si "
+      "necesitas un compañero de escape",
+      "Miras a Clarence, un tipo creativo, es conocido por sus "
+      "distintas fugas en las diferentes carceles por las que pasó",
+      "¿decides ir en solitario o prefieres escapar con Clarence?"};
+  inicio.decisiones = {"Solitario", "Clarence"};
+  Escena Solitario;
+  Solitario.narraciones = {
+      "Confias en tu ingenio y en tus habilidades por lo "
+      "que decides hacer el escape en solitario",
+      "Te pones a pensar formas de como salir de tu celda, la unica manera es "
+      "por la ventana de barrotes",
+      "Un dia notas que los demás presos colgaban sabanas en sus celdas "
+      "cuando los pasillos estaban llenos de personas ",
+      "¿decides hacer una prueba poniendo tu sabana de tal forma que tape lo "
+      "que estas haciendo o prefieres esperar otra manera de escape?"};
+  Solitario.decisiones = {"Poner sabana", "esperar otra opción de escape"};
 
-  Escena John;
-  John.narraciones = {
-      "Escoges a John como compañero de escape",
-      "Te acercas a John proponiendole escapar juntos de la carcel. Él acepta "
-      "y durantes varios dias conversan sobre las posibilidades que hay",
-      "un día en el que estaba preparando la comida para los prisioneros",
-      "Jhon ve entrar a un viejo amigo de infancia llamado Diego"
-      "el cual se encargaba de traer los alimentos "
-      "John le propone la idea de llevarte a ti y a John en uno de "
-      "los contenedores donde traen la comida, el amigo acepta ya que le "
-      "debia unos favores,"
-      "te propone hacer este escape o esperar e idear otro plan "
-      "¿que escoges?"};
-  John.decisiones = {"Aceptar el plan", "esperar otra opción de escape"};
+  Escena c_sabana;
+  c_sabana.narraciones = {
+    "Los guardias se acostumbran a ver tu sabana, por lo "
+ "que no te ponen problema",
+ "Ahora necesitas un destornillador"
+ "¿Como decides obtenerlo?"};
+  c_sabana.decisiones = {"Utilizar metal para crearlo","robarlo del area de metales"};
+  
+  Escena c_crear;
+  c_crear.narraciones = {
+    "Decides crear tu propio destornillador",
+    "Utilizas unas hojas de acero para crear el destornillador "
+    "y darle forma",
+    "logras quitar con el destornillador la primera parte de la ventana",
+    "tienes que cortar la segunda parte con una hoja de sierra",
+    "¿como la consigues?"};
+  c_crear.decisiones = {"le pagas a un guardia para que te la consiga","la robas del area de metales"};
 
-  Escena c_contenedores;
-  c_contenedores.narraciones = {
-      "decidiste aceptar este plan de escape por lo que "
-      "ahora tienes que escontrar el momento perfecto para hacerlo ",
-      "un dia en el que es turno de Diego de traer los alimentos "
-      "John te hace la señal para"  
-      "que vayas a la cocina, una ves allí ",
-      "en el momento de entrar a los contenedores y escapar, entra un "
-      "inesperado guardia de seguridad, tienes la opción de golpearlo o "
-      "sobornarlo",
-      "¿cual escoges?"};
-  c_contenedores.decisiones = {"golpear al guardia", "sobornar al guardia"};
+  Escena fin_robar;
+  fin_robar.narraciones = {
+    "Un dia en el que estas en el area de metales, intentas meter la herramienta en tu ropa interior",
+    "en el momento que vas a salir suena el detector de metales, y eres descubierto",
+    "te requisan, te hacen quitar la ropa y finalmente descubren el objeto",
+    "eres castigado y llevado a tu celda de vuelta "};
 
-  Escena c_esperar;
-  c_esperar.narraciones = {
-      "Decides esperar otra opción de escape"
-      "escuchas a unos guardias hablar sobre el problema de humedad"
-      "que presenta la carcel en estos momentos,",
-      "por lo que tienes una nueva opcion de escape a traves de cavar un hueco "
-      "en la pared,"
-      "¿le comentas esto a Jhon con la posibilidad de que uno de los dos quede "
-      "encerrado"
-      "o decides escapar en solitario con mas posibilidades de exito?"};
-  c_esperar.decisiones = {"decirle a john y arriesgarse",
-                          "cavar el hueco solo"};
+  Escena c_pagar;
+  c_pagar.narraciones = {
+    "Decides sobornar al guardia",
+    "el acepta tu suborno y te trae la hoja de sierra",
+    "ya tienes la forma de escapar de tu celda",
+    "tiene que pensar como salir salir de la isla una vez pasada la reja",
+    "Recuerdas haber visto sacos un cuarto de lavanderia, "
+    "con estsos puedes hacer una balsa para poder pasar a la isla, tambien tienes la opción de atravesarla nadando"
+    "¿cuál decides?"};
+  c_pagar.decisiones = {"Hacer la balsa","Arriesgarte y pasarla nadando"};
+  
+  Escena c_balsa;
+  c_balsa.narraciones = {
+    "Llega el dia en el que vas a salir de tu celda",
+    "coges el destornillador, y abres la primera parte de la ventana",
+    "coges la hoja de sierra y cortas la segunda parte de la ventana, logras salir al patio",
+    "te encuentras con una reja de 5 metros de altura",
+    "tienes las siguientes opciones para pasar el obstaculo"};
+  c_balsa.decisiones = {"cortar la reja con la sierra con riesgo de hacer ruido y ser decubiero","trepar la reja pero dejar la balsa y tener que buscar otra forma de atravesar la isla"};
+
+  Escena fin_nadar1;
+  fin_nadar1.narraciones = { 
+    "Llega el dia en el que vas a salir de tu celda",
+    "coges el destornillador, y abres la primera parte de la ventana ",
+    "coges la hoja de sierra y cortas la segunda parte de la ventana, logras salir al patio ",
+    "te encuentras con una reja de 5 metros de altura",
+    "decides cortar la reja con la sierra y nadar hasta la costa ",
+    "mueres ahogado y eres devorado por los tiburones"};
+
+  Escena fin_cortar1;
+  fin_cortar1.narraciones = {"Logras cortar la reja sin que se den cuenta los guardias",
+    "utilizas la balsa previamente hecha con los sacos",
+    "emprendes tu viaje hacia tu libertad",
+    "pero en medio del trayecto, unos guardias que iban en barco te encuentran y te vuelven a encerrar",
+    "te dan 50 años mas por el intento de fuga y "
+    "quedas encerrado de por vida en Alcatraz"};
+
+  Escena c_trepar1;
+  c_trepar1.narraciones = {
+    "Logras trepar el obstaculo de la reja pero tuviste que dejar la balsa,"
+    "ves que unos guardias dejan su barco en la costa un momento para descnasar"
+    "tienes las siguientes opciones"};
+  c_trepar1.decisiones = {"robar el barco","irte nadando a la costa"};
+
+  Escena fin_robarbarco;
+  fin_robarbarco.narraciones = {
+    "Logras robar el barco y  consigues tu libertad"
+    "haz completado tu objetivo",
+    "lo siguiente es escapar de la persecusion",
+    "esto ya no es nuestro problema",
+    "suerte con eso"};
+
+  Escena fin_nadar2;
+  fin_nadar2.narraciones = {"Decides irte nadando hacia la costa",
+    "No tienes suerte en tu intento de escape",
+    "te ahogas y te deboran los tiburones"
+    };
+  
+  Escena esperar;
+  esperar.narraciones = {
+      "Decides esperar otra opción de escape",
+      "pasan los dias, Te fijas que las cerraduras de las puertas "
+    "tienen dos puntos de colores, unas son verdes y otras son rojas",
+    "tienes que escoger una llave para poder replicarla, ¿cuál escoges?"};
+  esperar.decisiones = {"llave verde","llave roja"};
+      
+  Escena c_verdes;
+  c_verdes.narraciones = {
+    "Logras replicar la llave para las puertas verdes",
+    "decides comenzar tu plan de escape abriendo las puertas uno y dos y logras salir",
+    "te encuentras con una reja de 5 metros"
+    "¿que decides hacer?"
+    };
+  c_verdes.decisiones = {"cortar la reja","trepar la reja"};
+
+  Escena c_cortar2;
+  c_cortar2.narraciones = {
+    "Logras pasar la reja",
+    "Ahora te encuentras con el problema de como salir de la isla",
+    "a lo lejos se ve que se acerca lentamente un barco de guardias, te escondes para que no te vean",
+    "Los guardias se bajan del barco para buscar porque les avisaron de unos ruidos por esa zona"
+    "tienes las siguientes opciones a realizar"};
+  c_cortar2.decisiones = {"Dejar pasar la oportunidad e irte nadando","robar el barco arriesgandote a que te capturen o que te disparen"};
+
+  Escena fin_nadar3;
+  fin_nadar3.narraciones = {
+    "Decides dejar pasar la oportunidad"
+    " e irte nadando hacia la costa",
+    "tienes suerte y llegaste al otro lado",
+    "estas en libertad"};
+
+  Escena fin_robarbarco2;
+  fin_robarbarco2.narraciones = {
+    "Decides robar el barco de los guardias"
+    "antes de que te subas uno de los guardias te nota",
+    "es un novato por lo que el miedo se apodera de el y"
+    " te dispara",
+    "caes muerto al mar"
+    "no has logrado tu objetivo"};
+
+  Escena c_rojas;
+  c_rojas.narraciones = {
+    "Notas que hay muy pocas puertas rojas",
+    "Posiblemente no puedas escapar replicando la llave "
+    "de las puertas rojas",
+    "¿quieres seguir replicando la llave roja o empiezas a crear la verde?"};
+  c_rojas.decisiones = {"crear la llave de las puertas verdes","seguir haciendo la llave"};
+
+  Escena fin_rojas;
+  fin_rojas.narraciones = {
+    "Logras recrear la llave de las puertas rojas",
+    "Decides empezar a hacer tu plan de escape",
+    "pasas una puerta que se habria con la puerta roja, pasas a la segunda y te das cuenta que no se puede abrir con la roja"
+    "de la desesperacion intentas abrirla pero "
+    "un guardia te escucha y eres recapturado",
+    "no logras tu libertad"};
+
 
   Escena Clarence;
   Clarence.narraciones = {
@@ -213,8 +325,8 @@ Escena obtener_escena_inicial() {
       "Manda a buscarte y te castigan por tratar de escapar de la carcel y "
       "dañar la celda."};
 
-  Escena c_llaves;
-  c_llaves.narraciones = {
+  Escena fin_llaves;
+  fin_llaves.narraciones = {
       "Clarence explica el plan, el cual consiste en llamar a un guardia en la "
       "noche a la celda, robarle las llaves y que tu lo noqueas",
       "Se hace de noche y llamas al guardia, se acerca y le dices que te "
@@ -235,12 +347,31 @@ Escena obtener_escena_inicial() {
 
   c_respiradero.sig_escenas = {cr_carton, cr_manta};
 
-  Clarence.sig_escenas = {c_respiradero, c_llaves};
+  Clarence.sig_escenas = {c_respiradero, fin_llaves};
+  
 
-  // c_contenedores = {c_golpear, c_sobornar};
-  John.sig_escenas = {c_contenedores, c_esperar};
+  c_trepar1.sig_escenas = {fin_robarbarco,fin_nadar2};
+  
+  c_balsa.sig_escenas = {fin_cortar1,c_trepar1};
+  
+  c_pagar.sig_escenas = {c_balsa,fin_nadar1};
+  
+  c_crear.sig_escenas = {c_pagar,fin_robar};
+    
+  c_sabana.sig_escenas = {c_crear,fin_robar};
+  
 
-  inicio.sig_escenas = {John, Clarence};
+  c_cortar2.sig_escenas = {fin_nadar3,fin_robarbarco2};
+
+  c_verdes.sig_escenas = {c_cortar2,c_cortar2};
+
+  c_rojas.sig_escenas = {c_verdes,fin_rojas};
+
+  esperar.sig_escenas = {c_verdes,c_rojas};
+  
+  Solitario.sig_escenas = {c_sabana, esperar};
+
+  inicio.sig_escenas = {Solitario, Clarence};
 
   return inicio;
 }
