@@ -2,8 +2,15 @@
 #include "core/Language.h"
 #include "data/EscapeStory.h"
 
+#include <cstdlib>
 #include <iostream>
 #include <string>
+
+#ifdef _WIN32
+#define CLEAR_SCREEN "cls"
+#else
+#define CLEAR_SCREEN "clear"
+#endif
 
 int main()
 {
@@ -26,7 +33,7 @@ int main()
     bool playing = true;
 
     do {
-        system("cls");
+        system(CLEAR_SCREEN);
 
         if (lang == Language::English)
         {
