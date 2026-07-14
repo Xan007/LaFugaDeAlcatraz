@@ -2,7 +2,7 @@
 
 [![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=c%2B%2B)](https://isocpp.org)
 [![CMake](https://img.shields.io/badge/CMake-3.10-064F8C?logo=cmake)](https://cmake.org)
-[![Platform](https://img.shields.io/badge/platform-Windows-blue)](https://en.wikipedia.org/wiki/Microsoft_Windows)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blue)](https://en.wikipedia.org/wiki/Cross-platform_software)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 A text-based interactive fiction game based on the 1962 Alcatraz escape. You play as Frank Morris, and each choice branches the story toward different endings.
