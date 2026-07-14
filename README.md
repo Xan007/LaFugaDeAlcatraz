@@ -65,3 +65,9 @@ You play as Frank Morris, inmate AZ-1441, at Alcatraz. Narrated scenes advance t
 ## License
 
 MIT.
+
+## Contributors
+
+- [Sander Sierra](https://github.com/Xan007)
+- [Nicolix16](https://github.com/Nicolix16)
+- [Bengi-fish](https://github.com/Bengi-fish)
