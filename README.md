@@ -1,5 +1,10 @@
 # Escape from Alcatraz
 
+[![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=c%2B%2B)](https://isocpp.org)
+[![CMake](https://img.shields.io/badge/CMake-3.10-064F8C?logo=cmake)](https://cmake.org)
+[![Platform](https://img.shields.io/badge/platform-Windows-blue)](https://en.wikipedia.org/wiki/Microsoft_Windows)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
 A text-based interactive fiction game based on the 1962 Alcatraz escape. You play as Frank Morris, and each choice branches the story toward different endings.
 
 ## Background
@@ -25,40 +30,37 @@ EscapeFromAlcatraz/
     core/Scene.h/.cpp
     core/Story.h/.cpp
     core/Game.h/.cpp
+    core/Language.h
     data/EscapeStory.h/.cpp
   util/Input.h
 ```
 
 | Layer | Responsibility |
 |---|---|
-| Scene | Stores narrations, decisions, and child scenes. Tracks the current narration index. |
-| Story | Holds the scene graph. Manages the current scene, decision traversal, and restarts. |
-| Game | Runs the narrative loop: displays text, prompts decisions, advances the story. |
-| EscapeStory | Builds the branching graph. Isolated from game logic. |
+| Scene | Stores narrations, decisions, and child scenes |
+| Story | Manages the scene graph, traversal, and restarts |
+| Game | Runs the narrative loop and user interaction |
+| EscapeStory | Builds the branching graph |
 
 ## Getting Started
 
-Requirements: C++17 compiler (MSVC, GCC, Clang), CMake >= 3.10 (optional).
+Requirements: C++17 compiler, CMake >= 3.10.
 
 ```
-cd EscapeFromAlcatraz
 cmake -B build
 cmake --build build
-./build/Release/escape.exe
+./build/escape.exe
 ```
 
 Or compile manually:
 
 ```
-cd EscapeFromAlcatraz
 g++ -std=c++17 -Isrc -Iutil src/main.cpp src/core/Scene.cpp src/core/Story.cpp src/core/Game.cpp src/data/EscapeStory.cpp -o escape
 ```
 
 ## Gameplay
 
-You play as Frank Morris, inmate AZ-1441, at Alcatraz. Narrated scenes advance the story. At key points you make choices that determine the outcome. Some paths end in freedom, others in capture or death.
-
-The game supports English and Spanish. You select the language at startup, and both the narrative and interface adapt accordingly.
+You play as Frank Morris, inmate AZ-1441, at Alcatraz. Narrated scenes advance the story. At key points you make choices that determine the outcome. Some paths end in freedom, others in capture or death. The game supports English and Spanish.
 
 ## License
 
